@@ -41,11 +41,27 @@
 
 ;; Highlight current line
 (global-hl-line-mode 1)
+(set-cursor-color "#f0dfaf")
 
 ;; Highlight matching pairs of parentheses and other characters when the point is on them.
 (show-paren-mode 1)
 
-(set-cursor-color "#f0dfaf")
-
 ;; Some users want to always use `y-or-n-p', never `yes-or-no-p'.
 (defalias 'yes-or-no-p 'y-or-n-p)
+
+;;org-capture
+(define-key global-map "\C-cc" 'org-capture)
+(setq org-capture-templates
+      ;;inbox
+      '(("i"
+         "Inbox"
+         entry
+         (file+headline "~/org/inbox.org" "Tasks")
+         "* TODO %?\n  %i\n  %a")
+        ;;morning pages
+        ("m"
+         "Morning Pages"
+         entry
+         (file+datetree "~/org/morningpages.org")
+         "* %U\n "
+         )))
