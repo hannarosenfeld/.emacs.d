@@ -49,5 +49,3 @@
 
 ;; Some users want to always use `y-or-n-p', never `yes-or-no-p'.
 (defalias 'yes-or-no-p 'y-or-n-p)
-
-;; Hiding markup elements in org-mode
