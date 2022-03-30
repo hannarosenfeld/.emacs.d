@@ -64,4 +64,45 @@
          entry
          (file+datetree "~/org/morningpages.org")
          "* %U\n "
-         )))
+         )
+        ("r"
+         "Reference"
+         entry
+         (file+datetree "~/org/reference.org")
+         "* %U\n "
+         )
+        ("j"
+         "Journal"
+         entry
+         (file+datetree "~/org/journal.org")
+         "* %U\n "
+         )
+        ))
+
+
+;; org-refile
+(setq org-refile-use-outline-path 'file)
+
+
+
+
+;; https://orgmode.org/manual/Breaking-Down-Tasks.html
+;; If you would like a TODO entry to automatically change to DONE when all children are done, you can use the following setup:
+(defun org-summary-todo (n-done n-not-done)
+  "Switch entry to DONE when all subentries are done, to TODO otherwise."
+  (let (org-log-done org-log-states)   ; turn off logging
+    (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
+
+(add-hook 'org-after-todo-statistics-hook #'org-summary-todo)
+
+
+;; org-agenda
+(setq org-agenda-files '("~/gtd/inbox.org"
+                         "~/gtd/gtd.org"
+                         "~/gtd/someday.org"))
+
+
+;; refile
+(setq org-refile-targets '(("~/gtd/gtd.org" :maxlevel . 3)
+                           ("~/gtd/someday.org" :level . 1)
+                           ("~/gtd/reference.org" :maxlevel . 2)))
