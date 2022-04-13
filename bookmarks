@@ -1,0 +1,20 @@
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*-
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("init.el"
+ (filename . "~/.emacs.d/init.el")
+ (front-context-string . "d \"<f6>\") (lambd")
+ (rear-context-string . "obal-set-key (kb")
+ (position . 3311))
+("org-capture-last-stored"
+ (filename . "~/gtd/journal.org")
+ (front-context-string . "**** [2022-04-13")
+ (rear-context-string . "04-13 Wednesday\n")
+ (position . 7025))
+("org-refile-last-stored"
+ (filename . "~/gtd/reference.org")
+ (front-context-string . "** TODO Equanimi")
+ (rear-context-string . " own advantage.\n")
+ (position . 10426))
+)

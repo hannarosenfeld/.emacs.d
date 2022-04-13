@@ -56,25 +56,25 @@
       '(("i"
          "Inbox"
          entry
-         (file+headline "~/org/inbox.org" "Tasks")
+         (file+headline "~/gtd/inbox.org" "Tasks")
          "* TODO %?\n  %i\n  %a")
         ;;morning pages
         ("m"
          "Morning Pages"
          entry
-         (file+datetree "~/org/morningpages.org")
+         (file+datetree "~/gtd/morningpages.org")
          "* %U\n "
          )
         ("r"
          "Reference"
          entry
-         (file+datetree "~/org/reference.org")
+         (file+datetree "~/gtd/reference.org")
          "* %U\n "
          )
         ("j"
          "Journal"
          entry
-         (file+datetree "~/org/journal.org")
+         (file+datetree "~/gtd/journal.org")
          "* %U\n "
          )
         ))
